@@ -31,6 +31,7 @@ form {
 svg {
   height: 33px;
   width: 33px;
+  pointer-events: none;
 }
 
 .todo-button {
@@ -42,4 +43,93 @@ svg {
 .todo-button:hover {
   background: #ecb604;
   color: white;
+}
+
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.todo-list {
+  min-width: 30%;
+  list-style: none;
+}
+.todo {
+  margin: 0.5rem;
+  height: 30px;
+  background: white;
+  color: black;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.5s ease;
+}
+.todo li {
+  flex: 1;
+}
+.trash-btn,
+.completed-btn {
+  background: #ff6f47;
+  color: white;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  height: 33px;
+  width: 33px;
+  font-size: 1rem;
+}
+
+.completed-btn {
+  background-color: green;
+}
+
+.todo-item {
+  padding: 0 0.5rem;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.fall {
+  transform: translateY(8rem) rotateZ(20deg);
+  opacity: 0;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
+
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+select {
+  color: #ff6f47;
+  width: 10rem;
+  cursor: pointer;
+  padding: 1rem;
+}
+
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  background: #ff6f47;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  pointer-events: none;
+}
+
+.select:hover:after {
+  background: white;
+  color: darkgoldenrod;
 }
